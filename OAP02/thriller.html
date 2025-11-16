@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo dos Livros - Thriller & Mistério</title>
+    <!-- Carregamento do Tailwind CSS para estilo e responsividade -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Configuração de cores e fonte padrão (mais básico) */
+        :root {
+            --primary-color: #3B82F6; /* Azul básico */
+            --border-color: #D1D5DB; /* Cinza claro para bordas */
+        }
+        body {
+            background-color: #f0f0f0; /* Fundo mais claro e simples */
+            color: #222;
+        }
+        /* Estilo para links de navegação */
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+        /* Estilização para o link ATIVO (esta página) */
+        .nav-link.active {
+            color: var(--primary-color);
+            font-weight: bold;
+            border-bottom: 2px solid var(--primary-color);
+        }
+    </style>
+    <!-- Configuração do Tailwind para usar a cor primária -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': 'var(--primary-color)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- CABEÇALHO (Header) - Fixo no topo e com borda simples -->
+    <header class="bg-white border-b border-gray-300 sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Título do Blog -->
+                <a href="index.html" class="text-2xl font-bold text-gray-800">Mundo dos Livros</a>
+                
+                <!-- NAVEGAÇÃO (Nav) - Itens do Menu -->
+                <nav id="main-nav" class="hidden md:flex space-x-6">
+                    <a href="index.html" class="nav-link text-gray-700">Início</a>
+                    <a href="fantasia.html" class="nav-link text-gray-700">Fantasia Épica</a>
+                    <a href="scifi.html" class="nav-link text-gray-700">Sci-Fi & Distopias</a>
+                    <a href="thriller.html" class="nav-link text-gray-700 active">Thriller & Mistério</a>
+                    <a href="contatos.html" class="nav-link text-gray-700">Contatos</a>
+                </nav>
+
+                <!-- Menu Mobile (Hamburguer) -->
+                <button id="menu-button" class="md:hidden p-2 text-gray-500 border border-gray-400 rounded-sm">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Menu Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-300">
+            <div class="pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-start">
+                <a href="index.html" class="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Início</a>
+                <a href="fantasia.html" class="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Fantasia Épica</a>
+                <a href="scifi.html" class="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Sci-Fi & Distopias</a>
+                <a href="thriller.html" class="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Thriller & Mistério</a>
+                <a href="contatos.html" class="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Contatos</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-4xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8">
+        <article class="bg-white p-6 rounded border border-gray-300 space-y-5">
+            <h1 class="text-3xl font-bold text-primary mb-3">Trilhas Ocultas: Um Enigma Criminal</h1>
+            <div class="flex items-start space-x-4 mb-3">
+                <img src="https://chaton-files.s3.us-east-2.amazonaws.com/p/T0xO4be8jlA9bgDhoMeyX/t5yMWSOWgLeZUJRNT24Wt/zM97llBY269CTLZITk6qT1.jpeg" 
+                     alt="[Imagem de tecnologia ou futuro]" 
+                     class="w-1/3 h-auto rounded object-cover border border-gray-300">
+                <p class="text-gray-700 leading-relaxed w-2/3">
+                 Bem-vindo a "Trilhas Ocultas: Um Enigma Criminal"! 🕵️‍♂️ Estamos empolgados em tê-lo aqui! Prepare-se para mergulhar em um mundo repleto de mistérios e investigações intrigantes. Cada pista o levará mais perto da verdade, enquanto você desvenda segredos e enfrenta desafios inesperados. Sinta-se à vontade para explorar, fazer perguntas e compartilhar suas teorias. Que comece a jornada na busca pela resposta!
+                </p>
+            </div>
+
+            <h2 class="text-xl font-semibold text-gray-800 mt-4">A Empregada: Bem-vinda à família</h2>
+            <div class="flex items-start space-x-4 mt-8">
+                <img src="https://m.media-amazon.com/images/I/81EMPWukojL._SL1500_.jpg" 
+                     alt="Capa do Livro A Bússola de Ouro" 
+                     class="w-48 h-auto rounded border border-gray-300">
+                <p class="text-gray-700 leading-relaxed">
+                "A Empregada: Bem-vinda à família" conta a história de Millie, uma ex-presidiária que consegue um emprego como empregada doméstica para o rico casal Nina e Andrew Winchester. Inicialmente, Millie trabalha duro para manter seu emprego e lida com o comportamento imprevisível e por vezes cruel de Nina. No entanto, a história dá uma reviravolta quando a perspectiva muda para Nina, revelando que a dinâmica entre as personagens é completamente diferente do que Millie imaginava e que a família perfeita esconde segredos obscuros. 
+                </p>
+            </div>
+            <button onclick="toggleMoreInfo('more-info-bussola')" class="mt-2 px-4 py-2 bg-primary text-white rounded">Mais Informações</button>
+            <div id="more-info-bussola" class="hidden mt-2">
+                <p class="text-gray-700">Millie começa a perceber que a vida perfeita que imaginava para seus empregadores é, 
+                    na verdade, uma ilusão. A aparentemente idealizada família Winchester esconde segredos 
+                    obscuros e conflitos internos, que vão muito além do que Millie poderia imaginar.</p>
+            </div>
+
+            <h2 class="text-xl font-semibold text-gray-800 mt-4">O Jardim das Borboletas: Nem toda beleza será capturada</h2>
+            <div class="flex items-start space-x-4 mt-8">
+                <img src="https://m.media-amazon.com/images/I/A1P9XyAVCiL._SL1500_.jpg" 
+                     alt="Capa do Livro O Jardim das Borboletas" 
+                     class="w-48 h-auto rounded border border-gray-300">
+                <p class="text-gray-700 leading-relaxed">
+                "O Jardim das Borboletas: Nem toda beleza será capturada" 
+                é um livro de suspense e terror da autora Dot Hutchison. A trama se passa em uma mansão
+                 isolada onde um homem conhecido como "Jardineiro" mantém jovens mulheres em cativeiro, marcando-as com 
+                 tatuagens de borboletas para nomeá-las. A história se desenvolve a partir do interrogatório de uma das sobreviventes, Maya, que precisa contar aos agentes do FBI o que aconteceu no jardim. 
+                </p>
+            </div>
+            <button onclick="toggleMoreInfo('more-info-jardim')" class="mt-2 px-4 py-2 bg-primary text-white rounded">Mais Informações</button>
+            <div id="more-info-jardim" class="hidden mt-2">
+                <p class="text-gray-700">O Jardim das Borboletas explora a luta pela sobrevivência, a resiliência das vítimas e as complexidades do trauma. O livro é um retrato poderoso da luta contra o mal e a busca pela liberdade.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer class="bg-gray-700 text-white mt-10 p-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center border-t border-gray-600 pt-3">
+                <p class="text-sm">&copy; 2025.</p>
+                <p class="text-xs mt-1 text-gray-400">Trabalho para AOP2 | Integrantes do Grupo: Matheus Oliveira,Douglas da Silva, Fábio campos,Lourival gonçaves.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menu-button').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        function toggleMoreInfo(id) {
+            const infoDiv = document.getElementById(id);
+            infoDiv.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
