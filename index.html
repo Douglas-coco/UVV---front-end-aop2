@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo dos livros - Início</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Configuração de cores e fonte padrão (mais básico) */
+        :root {
+            --primary-color: #21519d; /* Azul básico */
+            --border-color: #b2b6b6; /* Cinza claro para bordas */
+        }
+        body {
+            background-color: #e3e3e3; /* Fundo mais claro e simples */
+            color: #222;
+        }
+        /* Estilo para links de navegação */
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+        /* Estilização para o link ATIVO (esta página) */
+        .nav-link.active {
+            color: var(--primary-color);
+            font-weight: bold;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        /* Estilo para o cartão de conteúdo de destaque - Simplificado */
+        .feature-card {
+            border: 1px solid var(--border-color); /* Usando borda básica */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra mais direta */
+        }
+        .feature-card:hover {
+            background-color: #f9f9f9; /* Mudança de cor simples no hover */
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': 'var(--primary-color)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <header class="bg-white border-b border-gray-300 sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="text-2xl font-bold text-gray-500">Mundo dos     Livros</a>
+                
+                <nav id="main-nav" class="hidden md:flex space-x-6">
+                    <a href="index.html" class="nav-link text-gray-700 active">Início</a>
+                    <a href="fantasia.html" class="nav-link text-gray-700">Fantasia Épica</a>
+                    <a href="scifi.html" class="nav-link text-gray-700">Sci-Fi & Distopias</a>
+                    <a href="thriller.html" class="nav-link text-gray-700">Thriller & Mistério</a>
+                    <a href="contatos.html" class="nav-link text-gray-700">Contatos</a>
+                </nav>
+
+                <button id="menu-button" class="md:hidden p-2 text-gray-500 border border-gray-400 rounded-sm">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-300">
+            <div class="pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-start">
+                <a href="index.html" class="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Início</a>
+                <a href="fantasia.html" class="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Fantasia Épica</a>
+                <a href="scifi.html" class="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Sci-Fi & Distopias</a>
+                <a href="thriller.html" class="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Thriller & Mistério</a>
+                <a href="contatos.html" class="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Contatos</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="app-content" class="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8">
+        <section id="home-content" class="space-y-8">
+            <div class="bg-white p-6 rounded border border-gray-300">
+                <h1 class="text-3xl font-bold text-gray-800 mb-3">Bem-vindo ao Mundo dos Livros!</h1>
+                <p class="text-md text-gray-700 leading-relaxed">
+                    É com entusiasmo que lhe damos as boas-vindas ao nosso blog, um refúgio para todos que adoram se perder em tramas de ficção e mistério. Aqui, você encontrará uma seleção cuidadosa de resumos envolventes, dicas valiosas e análises profundas sobre os melhores livros que vão manter você na ponta da cadeira.
+                </p>
+            </div>
+
+            <div class="space-y-5">
+                <h2 class="text-2xl font-semibold text-gray-800 border-b-2 pb-1 border-primary">Gêneros em Destaque</h2>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    
+                    <a href="fantasia.html" class="feature-card block bg-white rounded overflow-hidden cursor-pointer">
+                        <img src="https://chaton-files.s3.us-east-2.amazonaws.com/p/T0xO4be8jlA9bgDhoMeyX/wNwq0MFLMIODJTeXx3p8n/UXEw45npQIX27q0yr1Ji11.jpeg" 
+                             alt="[Imagem de castelo, representando fantasia]" 
+                             class="w-full h-40 object-cover border-b border-gray-300">
+                        <div class="p-3">
+                            <h3 class="text-lg font-bold text-gray-900 mb-1">Construção de Mundos</h3>
+                            <p class="text-gray-600 text-sm">Viaje para reinos complexos e descubra grandes sagas de magia e aventura.</p>
+                        </div>
+                    </a>
+
+                    <a href="scifi.html" class="feature-card block bg-white rounded overflow-hidden cursor-pointer">
+                        <img src="https://chaton-files.s3.us-east-2.amazonaws.com/p/T0xO4be8jlA9bgDhoMeyX/wNwq0MFLMIODJTeXx3p8n/yYP79oiefIVmPjgE4BBzl1.jpeg" 
+                             alt="[Imagem de robôs, representando sci-fi]" 
+                             class="w-full h-40 object-cover border-b border-gray-300">
+                        <div class="p-3">
+                            <h3 class="text-lg font-bold text-gray-900 mb-1">Futuros Possíveis</h3>
+                            <p class="text-gray-600 text-sm">Explorando tecnologias avançadas e sociedades no futuro próximo ou distante.</p>
+                        </div>
+                    </a>
+
+                    <a href="thriller.html" class="feature-card block bg-white rounded overflow-hidden cursor-pointer">
+                        <img src="https://chaton-files.s3.us-east-2.amazonaws.com/p/T0xO4be8jlA9bgDhoMeyX/wNwq0MFLMIODJTeXx3p8n/tuPbA5FZFYk2cBgjhXVmt1.jpeg" 
+                             alt="[Imagem de lupa, representando mistério]" 
+                             class="w-full h-40 object-cover border-b border-gray-300">
+                        <div class="p-3">
+                            <h3 class="text-lg font-bold text-gray-900 mb-1">Suspensão Garantida</h3>
+                            <p class="text-gray-600 text-sm">Os melhores livros de suspense, com plot twists e investigações.</p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-700 text-white mt-10 p-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center border-t border-gray-600 pt-3">
+                <p class="text-sm">&copy; 2025 Mundo Dos Livros .</p>
+                <p class="text-xs mt-1 text-gray-400">Trabalho para AOP2 | Integrantes do Grupo: Matheus Oliveira,Douglas da Silva, Fábio campos,Lourival gonçaves.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript SIMPLES para abrir/fechar o menu móvel
+        document.getElementById('menu-button').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

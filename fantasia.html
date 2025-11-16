@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Dos Livros - Fantasia Épica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary-color: #3B82F6; /* Azul básico */
+            --border-color: #D1D5DB; /* Cinza claro para bordas */
+        }
+        body {
+            background-color: #f0f0f0; /* Fundo mais claro e simples */
+            color: #222;
+        }
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+        .nav-link.active {
+            color: var(--primary-color);
+            font-weight: bold;
+            border-bottom: 2px solid var(--primary-color);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': 'var(--primary-color)',
+                    }
+                }
+            }
+        };
+
+        function toggleMoreInfo(id) {
+            const infoDiv = document.getElementById(id);
+            infoDiv.classList.toggle('hidden');
+        }
+    </script>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <header class="bg-white border-b border-gray-300 sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="text-2xl font-bold text-gray-800">Mundo Dos Livros</a>
+                <nav id="main-nav" class="hidden md:flex space-x-6">
+                    <a href="index.html" class="nav-link text-gray-700">Início</a>
+                    <a href="fantasia.html" class="nav-link text-gray-700 active">Fantasia Épica</a>
+                    <a href="scifi.html" class="nav-link text-gray-700">Sci-Fi & Distopias</a>
+                    <a href="thriller.html" class="nav-link text-gray-700">Thriller & Mistério</a>
+                    <a href="contatos.html" class="nav-link text-gray-700">Contatos</a>
+                </nav>
+                <button id="menu-button" class="md:hidden p-2 text-gray-500 border border-gray-400 rounded-sm">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-300">
+            <div class="pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-start">
+                <a href="index.html" class="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Início</a>
+                <a href="fantasia.html" class="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Fantasia Épica</a>
+                <a href="scifi.html" class="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Sci-Fi & Distopias</a>
+                <a href="thriller.html" class="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Thriller & Mistério</a>
+                <a href="contatos.html" class="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Contatos</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-4xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8">
+        <article class="bg-white p-6 rounded border border-gray-300 space-y-5">
+            <h1 class="text-3xl font-bold text-primary mb-3">Entre Fadas e Guerreiros: A Lenda da Terra dos Sonhos</h1>
+            <div class="flex items-start space-x-4 mb-3">
+                <img src="https://chaton-files.s3.us-east-2.amazonaws.com/p/T0xO4be8jlA9bgDhoMeyX/JM3FF6dHx9UkeIVLyFVP3/qHnjjf3uE2weqVkEA6H6F1.jpeg" 
+                     alt="[Imagem de tecnologia ou futuro]" 
+                     class="w-1/3 h-auto rounded object-cover border border-gray-300">
+                <p class="text-gray-700 leading-relaxed w-2/3">
+                     Prepare-se para ser transportado a um mundo mágico onde a fantasia se entrelaça com a realidade, e cada página é um portal para aventuras inesquecíveis. Aqui, nas profundezas da Terra dos Sonhos, você encontrará fadas iluminando os céus com sua magia e guerreiros destemidos lutando por honra e liberdade. Nesta jornada, você se deparará com reinos encantados, criaturas místicas e lendas que transcendem o tempo. Cada história é uma tapeçaria de coragem, amizade e a eterna luta entre a luz e as sombras. Descubra segredos antigos, faça aliados inesperados e enfrente desafios que testarão o seu coração e a sua alma. Junte-se a nós enquanto desvendamos as maravilhas e os mistérios desta terra mágica. Que sua experiência aqui seja repleta de encantamento e inspiração, e que você encontre a sua própria lenda nas páginas que estão por vir!
+                </p>
+            </div>
+
+            <h2 class="text-xl font-semibold text-gray-800 mt-4">A Bússola de Ouro</h2>
+            <div class="flex items-start space-x-4 mt-8">
+                <img src="https://m.media-amazon.com/images/I/81SreumnhQL._UF1000,1000_QL80_.jpg" 
+                     alt="Capa do Livro A Bússola de Ouro" 
+                     class="w-48 h-auto rounded border border-gray-300">
+                <p class="text-gray-700 leading-relaxed">
+                    A “Bússola de Ouro” é o primeiro volume da trilogia “Fronteiras do Universo”, escrita por Phillip Pullman. A história se passa em um mundo paralelo onde todos os humanos têm um daemon, uma manifestação física externa da alma de uma pessoa em forma animal. Durante a infância a forma do daemon pode mudar, no entanto, após a puberdade, eles tomam uma forma definitiva de qualquer animal. A trama tem como personagem principal a garota Lyra Belacqua, e seu daemon, Pantalaimon, onde vivem tranquilos na Faculdade Jordan, em Oxford, quando acontecimentos estranhos envolvendo sequestro de crianças e a descoberta de um “Pó” misterioso fazem Lyra, junto com Pantalaimon, partirem em uma expedição para o Norte, buscando entender melhor a origem dos sequestros e o que o “Pó” realmente significa.
+                </p>
+            </div>
+            <button onclick="toggleMoreInfo('more-info-bussola')" class="mt-2 px-4 py-2 bg-primary text-white rounded">Mais Informações</button>
+            <div id="more-info-bussola" class="hidden mt-2">
+                <p class="text-gray-700">A trilogia "Fronteiras do Universo" é uma obra rica que explora temas como a filosofia, a religião e a natureza da realidade. Pullman convida os leitores a questionar as forças que moldam suas vidas e a buscar o verdadeiro significado da liberdade.</p>
+            </div>
+
+            <h2 class="text-xl font-semibold text-gray-800 mt-4">A Rainha Vermelha</h2>
+            <div class="flex items-start space-x-4 mt-8">
+                <img src="https://m.media-amazon.com/images/I/718rKQisF7L._SL1500_.jpg" 
+                     alt="Capa do Livro A Rainha Vermelha" 
+                     class="w-48 h-auto rounded border border-gray-300">
+                <p class="text-gray-700 leading-relaxed">
+                    O mundo de Mare Barrow é dividido pelo sangue: vermelho ou prateado. Mare e sua família são vermelhos: plebeus, humildes, destinados a servir uma elite prateada cujos poderes sobrenaturais os tornam quase deuses. Mare rouba o que pode para ajudar sua família a sobreviver e não tem esperanças de escapar do vilarejo miserável onde mora. Entretanto, numa reviravolta do destino, ela consegue um emprego no palácio real, onde, em frente ao rei e a toda a nobreza, descobre que tem um poder misterioso… Mas como isso seria possível, se seu sangue é vermelho? Em meio às intrigas dos nobres prateados, as ações da garota vão desencadear uma dança violenta e fatal, que colocará príncipe contra príncipe - e Mare contra seu próprio coração.
+                </p>
+            </div>
+            <button onclick="toggleMoreInfo('more-info-rainha')" class="mt-2 px-4 py-2 bg-primary text-white rounded">Mais Informações</button>
+            <div id="more-info-rainha" class="hidden mt-2">
+                <p class="text-gray-700">A Rainha Vermelha é um thriller que toca em questões sociais e políticas, além de explorar a luta por poder e a busca pela identidade em um mundo opressivo.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer class="bg-gray-700 text-white mt-10 p-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center border-t border-gray-600 pt-3">
+                <p class="text-sm">&copy; 2025.</p>
+                <p class="text-xs mt-1 text-gray-400">Trabalho para AOP2 |Integrantes do Grupo: Matheus Oliveira,Douglas da Silva, Fábio campos,Lourival gonçaves.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menu-button').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
