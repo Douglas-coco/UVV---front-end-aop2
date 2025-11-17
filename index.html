@@ -4,36 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mundo dos livros - Início</title>
+    <link href="css/style.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Configuração de cores e fonte padrão (mais básico) */
-        :root {
-            --primary-color: #21519d; /* Azul básico */
-            --border-color: #b2b6b6; /* Cinza claro para bordas */
-        }
-        body {
-            background-color: #e3e3e3; /* Fundo mais claro e simples */
-            color: #222;
-        }
-        /* Estilo para links de navegação */
-        .nav-link:hover {
-            color: var(--primary-color);
-        }
-        /* Estilização para o link ATIVO (esta página) */
-        .nav-link.active {
-            color: var(--primary-color);
-            font-weight: bold;
-            border-bottom: 2px solid var(--primary-color);
-        }
-        /* Estilo para o cartão de conteúdo de destaque - Simplificado */
-        .feature-card {
-            border: 1px solid var(--border-color); /* Usando borda básica */
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra mais direta */
-        }
-        .feature-card:hover {
-            background-color: #f9f9f9; /* Mudança de cor simples no hover */
-        }
-    </style>
     <script>
         tailwind.config = {
             theme: {
