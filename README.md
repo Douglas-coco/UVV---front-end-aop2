@@ -17,7 +17,7 @@ Cada livro possui um breve resumo, apontando o principal tema da obra.
 ---
 
 ## 👨‍💻 Autores
-Douglas da Silva Neto
-Fabio Campos Dias
-Lourival Gonçalves
-Matheus Oliveira do Carmo
+- Douglas da Silva Neto
+- Fabio Campos Dias
+- Lourival Gonçalves
+- Matheus Oliveira do Carmo
